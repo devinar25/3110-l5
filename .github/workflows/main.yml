@@ -1,0 +1,21 @@
+name: L5 CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: make exec
+      run: make
+    - name: run exec
+      run: ./test_catch
+    - name: make clean
+      run: make clean
