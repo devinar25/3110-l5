@@ -8,4 +8,4 @@ test: test.cpp
 
 # runs for "make clean"
 clean:
-	rm test  #include all targets here
+	rm test_catch
